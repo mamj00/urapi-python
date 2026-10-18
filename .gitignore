@@ -1,0 +1,16 @@
+node_modules/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.venv/
+.tools/
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+intent.txt
+job-id.txt

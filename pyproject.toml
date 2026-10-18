@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools==84.0.0", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urapi-sdk"
+version = "0.0.1"
+description = "Private server-side URAPI client generated from the public API contract"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+classifiers = ["Private :: Do Not Upload", "Programming Language :: Python :: 3", "Typing :: Typed"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+urapi = ["operations.json", "py.typed"]

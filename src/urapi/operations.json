@@ -1,0 +1,1196 @@
+{
+  "operation_count": 45,
+  "operations": {
+    "archiveTemplate": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "DELETE",
+      "path": "/v1/templates/{template_id}",
+      "path_params": [
+        {
+          "name": "template_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "cancelJob": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/jobs/{job_id}/cancel",
+      "path_params": [
+        {
+          "name": "job_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "completeUpload": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/uploads/{upload_id}/complete",
+      "path_params": [
+        {
+          "name": "upload_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "createDocumentRevision": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/documents/{job_id}/revisions",
+      "path_params": [
+        {
+          "name": "job_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        201
+      ]
+    },
+    "createExport": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/exports",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "createLink": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/links",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        201
+      ]
+    },
+    "createPDF": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/pdf",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "createQR": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/qr",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "createQuote": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": null,
+      "method": "POST",
+      "path": "/v1/quotes",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "createScreenshot": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/screenshots",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "createTemplate": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/templates",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        201
+      ]
+    },
+    "createTemplateVersion": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/templates/{template_id}/versions",
+      "path_params": [
+        {
+          "name": "template_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        201
+      ]
+    },
+    "createUpload": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/uploads",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        201
+      ]
+    },
+    "createWebhookEndpoint": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/webhook-endpoints",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        201
+      ]
+    },
+    "deleteFile": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "DELETE",
+      "path": "/v1/files/{file_id}",
+      "path_params": [
+        {
+          "name": "file_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "deleteLink": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "DELETE",
+      "path": "/v1/links/{link_id}",
+      "path_params": [
+        {
+          "name": "link_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "deleteWebhookEndpoint": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "DELETE",
+      "path": "/v1/webhook-endpoints/{endpoint_id}",
+      "path_params": [
+        {
+          "name": "endpoint_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "extractDocument": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/documents/extract",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "getDocumentResult": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/documents/{job_id}/result",
+      "path_params": [
+        {
+          "name": "job_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "getFile": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/files/{file_id}",
+      "path_params": [
+        {
+          "name": "file_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "getFileDownload": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/files/{file_id}/download",
+      "path_params": [
+        {
+          "name": "file_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "getJob": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/jobs/{job_id}",
+      "path_params": [
+        {
+          "name": "job_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "getLink": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/links/{link_id}",
+      "path_params": [
+        {
+          "name": "link_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "getLinkStats": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/links/{link_id}/stats",
+      "path_params": [
+        {
+          "name": "link_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "getTemplate": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/templates/{template_id}",
+      "path_params": [
+        {
+          "name": "template_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "getTemplateVersion": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/template-versions/{version_id}",
+      "path_params": [
+        {
+          "name": "version_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "getUsage": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/usage",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "getWebhookEndpoint": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/webhook-endpoints/{endpoint_id}",
+      "path_params": [
+        {
+          "name": "endpoint_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "listDocumentRevisions": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/documents/{job_id}/revisions",
+      "path_params": [
+        {
+          "name": "job_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [
+        {
+          "name": "cursor",
+          "required": false,
+          "schema": {
+            "maxLength": 500,
+            "type": "string"
+          }
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "schema": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          }
+        }
+      ],
+      "statuses": [
+        200
+      ]
+    },
+    "listFiles": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/files",
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "cursor",
+          "required": false,
+          "schema": {
+            "maxLength": 500,
+            "type": "string"
+          }
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "schema": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          }
+        }
+      ],
+      "statuses": [
+        200
+      ]
+    },
+    "listJobs": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/jobs",
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "cursor",
+          "required": false,
+          "schema": {
+            "maxLength": 500,
+            "type": "string"
+          }
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "schema": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "state",
+          "required": false,
+          "schema": {
+            "enum": [
+              "queued",
+              "running",
+              "retry_wait",
+              "succeeded",
+              "failed",
+              "cancelled",
+              "timed_out"
+            ],
+            "type": "string"
+          }
+        },
+        {
+          "name": "operation",
+          "required": false,
+          "schema": {
+            "enum": [
+              "pdf",
+              "screenshots",
+              "qr",
+              "images.render",
+              "images.transform",
+              "documents.extract",
+              "exports"
+            ],
+            "type": "string"
+          }
+        },
+        {
+          "name": "created_from",
+          "required": false,
+          "schema": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        {
+          "name": "created_to",
+          "required": false,
+          "schema": {
+            "format": "date-time",
+            "type": "string"
+          }
+        }
+      ],
+      "statuses": [
+        200
+      ]
+    },
+    "listLinks": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/links",
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "cursor",
+          "required": false,
+          "schema": {
+            "maxLength": 500,
+            "type": "string"
+          }
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "schema": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          }
+        }
+      ],
+      "statuses": [
+        200
+      ]
+    },
+    "listTemplateVersions": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/templates/{template_id}/versions",
+      "path_params": [
+        {
+          "name": "template_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [
+        {
+          "name": "cursor",
+          "required": false,
+          "schema": {
+            "maxLength": 500,
+            "type": "string"
+          }
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "schema": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          }
+        }
+      ],
+      "statuses": [
+        200
+      ]
+    },
+    "listTemplates": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/templates",
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "cursor",
+          "required": false,
+          "schema": {
+            "maxLength": 500,
+            "type": "string"
+          }
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "schema": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          }
+        }
+      ],
+      "statuses": [
+        200
+      ]
+    },
+    "listWebhookDeliveries": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/webhook-endpoints/{endpoint_id}/deliveries",
+      "path_params": [
+        {
+          "name": "endpoint_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [
+        {
+          "name": "cursor",
+          "required": false,
+          "schema": {
+            "maxLength": 500,
+            "type": "string"
+          }
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "schema": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          }
+        }
+      ],
+      "statuses": [
+        200
+      ]
+    },
+    "listWebhookEndpoints": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": null,
+      "method": "GET",
+      "path": "/v1/webhook-endpoints",
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "cursor",
+          "required": false,
+          "schema": {
+            "maxLength": 500,
+            "type": "string"
+          }
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "schema": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          }
+        }
+      ],
+      "statuses": [
+        200
+      ]
+    },
+    "publishTemplateVersion": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/template-versions/{version_id}/publish",
+      "path_params": [
+        {
+          "name": "version_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "renameTemplate": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": null,
+      "method": "PATCH",
+      "path": "/v1/templates/{template_id}",
+      "path_params": [
+        {
+          "name": "template_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "renderImage": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/images/render",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "replayWebhookDelivery": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/webhook-deliveries/{delivery_id}/replay",
+      "path_params": [
+        {
+          "name": "delivery_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "rotateWebhookSecret": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/webhook-endpoints/{endpoint_id}/rotate-secret",
+      "path_params": [
+        {
+          "name": "endpoint_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "transformImage": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/images/transform",
+      "path_params": [],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    },
+    "updateLink": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "PATCH",
+      "path": "/v1/links/{link_id}",
+      "path_params": [
+        {
+          "name": "link_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "updateWebhookEndpoint": {
+      "body_required": true,
+      "has_body": true,
+      "idempotency": null,
+      "method": "PATCH",
+      "path": "/v1/webhook-endpoints/{endpoint_id}",
+      "path_params": [
+        {
+          "name": "endpoint_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        200
+      ]
+    },
+    "verifyWebhookEndpoint": {
+      "body_required": false,
+      "has_body": false,
+      "idempotency": {
+        "required": true,
+        "schema": {
+          "maxLength": 128,
+          "minLength": 8,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        }
+      },
+      "method": "POST",
+      "path": "/v1/webhook-endpoints/{endpoint_id}/verify",
+      "path_params": [
+        {
+          "name": "endpoint_id",
+          "required": true,
+          "schema": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "type": "string"
+          }
+        }
+      ],
+      "query_params": [],
+      "statuses": [
+        202
+      ]
+    }
+  },
+  "source": "contracts/public.openapi.json",
+  "source_sha256": "3f9c625cbd4a370e808e51aeab34c0d59f7efc05bd6cf7b8864d33ba3538bd45"
+}
